@@ -1,1 +1,109 @@
-<p>layout works!</p>
+<!-- ******* GRID - LIST ******* -->
+
+<!-- <mat-grid-list cols="4" rowHeight="2:1" gutterSize="10px">
+    <mat-grid-tile colspan="4">Tile 1</mat-grid-tile>
+    <mat-grid-tile>Tile 2</mat-grid-tile>
+    <mat-grid-tile>Tile 3</mat-grid-tile>
+    <mat-grid-tile>Tile 4</mat-grid-tile>
+    <mat-grid-tile>Tile 5</mat-grid-tile>
+    <mat-grid-tile>Tile 6</mat-grid-tile>
+    <mat-grid-tile>Tile 7</mat-grid-tile>
+    <mat-grid-tile>Tile 8</mat-grid-tile>
+    <mat-grid-tile>Tile 9</mat-grid-tile>
+</mat-grid-list> -->
+
+<!-- ******* EXPANSION- PANEL ******* -->
+
+<!-- <mat-accordion multi="false">
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>Angular Fundamentals</mat-panel-title>
+            <mat-panel-description>Total Duration 3 hrs</mat-panel-description>
+        </mat-expansion-panel-header>
+        <p>This is the panel content. Add courses details. This is the panel content. Add courses details.This is the panel content. Add courses details.This is the panel content. Add courses details.This is the panel content. Add courses details.This is the panel content. Add courses details.This is the panel content. Add courses details.This is the panel content. Add courses details.This is the panel content. Add courses details.This is the panel content. Add courses details.This is the panel content. Add courses details.This is the panel content. Add courses details.This is the panel content. Add courses details.This is the panel content. Add courses details.This is the panel content. Add courses details.This is the panel content. Add courses details.This is the panel content. Add courses details.This is the panel content. Add courses details.This is the panel content. Add courses details.This is the panel content. Add courses details.</p>
+    <mat-action-row>
+            <button mat-button >Enroll</button>
+    </mat-action-row>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>Angular Material</mat-panel-title>
+            <mat-panel-description>Total Duration 2 hrs</mat-panel-description>
+        </mat-expansion-panel-header>
+        <p>This is the panel content. Add courses details. This is the panel content. Add courses details.This is the panel content. Add courses details.This is the panel content. Add courses details.This is the panel content. Add courses details.This is the panel content. Add courses details.This is the panel content. Add courses details.This is the panel content. Add courses details.This is the panel content. Add courses details.This is the panel content. Add courses details.This is the panel content. Add courses details.This is the panel content. Add courses details.This is the panel content. Add courses details.This is the panel content. Add courses details.This is the panel content. Add courses details.This is the panel content. Add courses details.This is the panel content. Add courses details.This is the panel content. Add courses details.This is the panel content. Add courses details.This is the panel content. Add courses details.</p>
+    <mat-action-row>
+            <button mat-raised-button >Reservar</button>
+    </mat-action-row>
+    </mat-expansion-panel>
+</mat-accordion> -->
+
+<!-- ******* CARD ******* -->
+<!-- 
+<mat-card>     
+    <mat-card-title>Card Title</mat-card-title>
+    <mat-card-content>Card Content</mat-card-content>    
+    <mat-card-actions align="end">
+        <button mat-flat-button>Login</button>
+    </mat-card-actions>
+    <mat-card-footer>Card Footer</mat-card-footer>  
+</mat-card> -->
+
+<!-- ******* TABS ******* -->
+
+<!-- <mat-tab-group #tabTipo (selectedTabChange)="logChanges(tabTipo.selectedIndex)">
+    <mat-tab label="Angular">Angular Content</mat-tab>
+    <mat-tab label="React">React Content</mat-tab>
+    <mat-tab label="Vue">Vue Content</mat-tab>
+</mat-tab-group>
+{{tabTipo.selectedIndex}} -->
+
+<!-- ******* STEPPER ******* -->
+<!-- <mat-horizontal-stepper linear>
+    <mat-step label="Shipping Address" completed="true"> 
+        <p>Shipping Address Details.</p>
+    </mat-step>
+    <mat-step label="Billing Address" completed="false" optional=""> 
+        <p>Billing Address Details.</p>
+        <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+        </div>
+    </mat-step>
+    <mat-step label="Place Order" completed="false"> 
+        <p>Place Order Details.</p>
+    </mat-step>
+</mat-horizontal-stepper>
+
+<mat-vertical-stepper linear>
+    <mat-step label="Shipping Address" completed="true"> 
+        <p>Shipping Address Details.</p>
+    </mat-step>
+    <mat-step label="Billing Address" completed="false" optional=""> 
+        <p>Billing Address Details.</p>
+        <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+        </div>
+    </mat-step>
+    <mat-step label="Place Order" completed="false"> 
+        <p>Place Order Details.</p>
+    </mat-step>
+</mat-vertical-stepper> -->
+
+
+<!-- ******* GENERALS ******* -->
+<mat-grid-list cols="2" rowHeight="2:1" gutterSize="10px">
+    <mat-grid-tile>Tile 1</mat-grid-tile>
+    <mat-grid-tile>        
+        <mat-card>     
+            <mat-card-title>Card Title</mat-card-title>
+            <mat-card-content>Card Content</mat-card-content>    
+            <mat-card-actions align="end">
+                <button mat-striked-button>Login</button>
+            </mat-card-actions>
+            <mat-card-footer>Card Footer</mat-card-footer>  
+        </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile>Tile 3</mat-grid-tile>
+    <mat-grid-tile>Tile 4</mat-grid-tile>
+</mat-grid-list>

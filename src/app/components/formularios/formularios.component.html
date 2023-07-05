@@ -1,1 +1,220 @@
-<p>formularios works!</p>
+<div style="text-align: center; display:flexbox;">
+    <h1>Formularios</h1>
+    
+    <mat-form-field>
+        <mat-label>Default</mat-label>
+        <input matInput>
+    </mat-form-field>
+
+    <mat-form-field floatLabel="never">
+        <mat-label>Never</mat-label>
+        <input matInput>
+    </mat-form-field>
+
+    <mat-form-field floatLabel="always">
+        <mat-label>Always</mat-label>
+        <input matInput>
+    </mat-form-field>
+
+    <mat-form-field floatLabel="auto">
+        <mat-label>Required</mat-label>
+        <input matInput required>
+    </mat-form-field>
+
+    <mat-form-field floatLabel="auto" hideRequiredMarker>
+        <mat-label>Marker Hidden</mat-label>
+        <input matInput required>
+        <mat-hint align="end">Max 5 Characters</mat-hint>
+    </mat-form-field>
+    
+</div>
+
+<div style="text-align: center; display:flexbox;">
+    <h1>Appareance</h1>
+    
+    <mat-form-field floatLabel="auto" hideRequiredMarker appearance="legacy">
+        <mat-label>Legacy Appareance</mat-label>
+        <input matInput required>
+        <mat-hint align="end">Max 5 Characters</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field floatLabel="auto" hideRequiredMarker appearance="standard">
+        <mat-label>Standard Appareance</mat-label>
+        <input matInput required>
+        <mat-hint align="end">Max 5 Characters</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field floatLabel="auto" hideRequiredMarker appearance="fill" >
+        <mat-label>Fill Appareance</mat-label>
+        <input matInput required>
+        <mat-hint align="end">Max 5 Characters</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field floatLabel="auto" hideRequiredMarker="true" appearance="outline">
+        <mat-label>Outline Appareance</mat-label>
+        <input matInput required>
+        <mat-hint align="end">Max 5 Characters</mat-hint>
+    </mat-form-field>
+   
+</div>
+<!-- 
+<div style="text-align: center; display:flexbox;">
+    <h1>Color</h1>
+    
+    <mat-form-field floatLabel="auto" hideRequiredMarker appearance="legacy" color="warn">
+        <mat-label>Warn Color</mat-label>
+        <input matInput required>
+        <mat-hint align="end">Max 5 Characters</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field floatLabel="auto" hideRequiredMarker appearance="standard" color="accent">
+        <mat-label>Accent Color</mat-label>
+        <input matInput required>
+        <mat-hint align="end">Max 5 Characters</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field floatLabel="auto" hideRequiredMarker appearance="fill" color="primary">
+        <mat-label>Primary Color</mat-label>
+        <input matInput required>
+        <mat-hint align="end">Max 5 Characters</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field floatLabel="auto" hideRequiredMarker="true" appearance="outline" color="default">
+        <mat-label>Defatul Color</mat-label>
+        <input matInput required>
+        <mat-hint align="end">Max 5 Characters</mat-hint>
+    </mat-form-field>
+   
+</div> -->
+
+<!-- <div style="text-align: center; display:flexbox;">
+    <h1>Select</h1>
+    <mat-form-field color="prirmary">
+        <mat-label>Topic</mat-label>
+        <mat-select [(value)]="selectedValue">
+            <mat-option>None</mat-option>
+            <mat-option value="angular">Angular</mat-option>
+            <mat-option value="react">React</mat-option>
+            <mat-option value="vue">Vue</mat-option>
+        </mat-select>
+    </mat-form-field>
+    {{selectedValue}}
+
+    <mat-form-field color="warn">
+        <mat-label>Topic</mat-label>
+        <mat-select [(value)]="selectedValueGroup">
+            <mat-option>None</mat-option>
+            <mat-optgroup label="Web">
+               <mat-option value="angular">Angular</mat-option>
+                <mat-option value="react">React</mat-option>
+                <mat-option value="vue">Vue</mat-option> 
+            </mat-optgroup>
+            <mat-optgroup label="Mobile">
+                <mat-option value="Ionic">Ionic</mat-option>
+                 <mat-option value="React Native">React Native</mat-option>
+             </mat-optgroup>            
+        </mat-select>
+    </mat-form-field>
+    {{selectedValueGroup}}
+
+    <mat-form-field color="accent">
+        <mat-label>Topic</mat-label>
+        <mat-select [(value)]="selectedValueGroupMultiple" multiple>
+            <mat-option>None</mat-option>
+            <mat-optgroup label="Web">
+               <mat-option value="angular">Angular</mat-option>
+                <mat-option value="react">React</mat-option>
+                <mat-option value="vue">Vue</mat-option> 
+            </mat-optgroup>
+            <mat-optgroup label="Mobile">
+                <mat-option value="Ionic">Ionic</mat-option>
+                 <mat-option value="React Native">React Native</mat-option>
+             </mat-optgroup>            
+        </mat-select>
+    </mat-form-field>
+    {{selectedValueGroupMultiple}}
+
+    
+</div> -->
+<div style="text-align: center; display:flexbox;">
+    <h1>Autocomplete</h1>
+    <form>
+        <mat-form-field>
+            <input type="text" matInput [matAutocomplete]="auto"  placeholder="Automostrar" />
+            <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+                <mat-option *ngFor="let option of objectOptions" [value]="option">
+                    {{option.name}}
+                </mat-option>
+            </mat-autocomplete>
+        </mat-form-field>
+        <mat-form-field>
+            <input type="text" matInput [matAutocomplete]="autoFill" [formControl]="myControl" placeholder="autocomplete"  />
+            <mat-autocomplete #autoFill="matAutocomplete">
+                <mat-option *ngFor="let option of filterOptions | async" [value]="option">
+                    {{option}}
+                </mat-option>
+            </mat-autocomplete>
+        </mat-form-field>
+    </form>
+</div>
+<!-- <div style="text-align: center; display:flexbox;">
+    <h1>Check Box</h1>
+    <mat-checkbox> Subscribe </mat-checkbox>
+    <br>
+    <mat-checkbox labelPosition="before"> Subscribe </mat-checkbox>
+    <br>
+    <mat-checkbox color="primary"> Subscribe </mat-checkbox>
+    <br>
+    <mat-checkbox color="warn"> Subscribe </mat-checkbox>
+    <br>
+</div>
+<div style="text-align: center; display:flexbox;">
+    <h1>Radio Option</h1>
+    <mat-radio-group>
+        <mat-radio-button value="angular" color="primary">Angular</mat-radio-button>
+        <mat-radio-button value="react">React</mat-radio-button>
+        <mat-radio-button value="vue" color="warn">Vue</mat-radio-button>
+    </mat-radio-group>
+    <br>
+</div> -->
+<div style="text-align: center; display:flexbox;">
+    <h1>DatePicker</h1>
+
+    <mat-form-field >
+        <mat-label>Choose a date</mat-label>
+        <input matInput [matDatepicker]="myDatePicker" />
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle [for]="myDatePicker" matSuffix ></mat-datepicker-toggle>
+        <mat-datepicker #myDatePicker></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Year</mat-label>
+        <input matInput [matDatepicker]="myDatePicker2" />
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle [for]="myDatePicker2" matSuffix class=""></mat-datepicker-toggle>
+        <mat-datepicker #myDatePicker2 startView="year"></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Multi Year</mat-label>
+        <input matInput [matDatepicker]="myDatePicker3" />
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle [for]="myDatePicker3" matSuffix></mat-datepicker-toggle>
+        <mat-datepicker #myDatePicker3 startView="multi-year"></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Rango de Fecha</mat-label>
+        <input matInput [matDatepicker]="myDatePicker4" [min]="minDate" [max]="maxDate" />
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle [for]="myDatePicker4" matSuffix></mat-datepicker-toggle>
+        <mat-datepicker #myDatePicker4></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>NO Sab ni Dom</mat-label> 
+        <input matInput [matDatepicker]="myDatePicker5" [matDatepickerFilter]="dateFilter" />
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle [for]="myDatePicker5" matSuffix ></mat-datepicker-toggle>
+        <mat-datepicker #myDatePicker5></mat-datepicker>
+    </mat-form-field>
+    <br>
+</div>
+

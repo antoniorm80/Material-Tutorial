@@ -1,1 +1,25 @@
-<p>modales works!</p>
+<div style="text-align: center; display:flexbox; margin-top: 30px;">
+   <h1>Tooltips hover Botones</h1>
+    <button mat-raised-button matTooltip="Súper Lonjotas">Click Me -default</button>
+    <button mat-raised-button matTooltip="Súper Lonjotas" matTooltipPosition="after">Lonjas -After</button>
+    <button mat-raised-button matTooltip="Súper Lonjotas" matTooltipShowDelay="2000" [matTooltipHideDelay]="2000" >Lonjotas Automatic 2 seg</button>
+    <br/>
+    <br/>
+    <br/>
+    <h1>SnackBar - Notification</h1>
+     <button mat-button (click)="openSnackBar('Item deleted', 'Dismiss')" >
+        Snack Bar with Duration 2 seg
+     </button> 
+     <br/>
+     <br/>
+     <h1>SnackBar - Customized </h1>
+     <button mat-button (click)="openCustomSnackBar()" >
+        Show custom snackbar
+     </button> 
+     <br/>
+     <br/>
+     <h1>Dialog </h1>
+     <button mat-raised-button (click)="openDialog()" >
+       Open Pop-Up Dialog
+   </button> 
+</div>

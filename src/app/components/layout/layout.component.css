@@ -1,0 +1,21 @@
+mat-grid-list {
+    margin-top: 10px;
+}
+
+mat-grid-tile {
+    background-color: lightblue;
+}
+
+mat-panel-title {
+    font-size: 1.2em;
+    font-weight:  bold;
+}
+
+mat-panel-description{
+    justify-content: flex-end;
+}
+
+mat-card {
+    height: 80%;
+    width: 90%;
+}

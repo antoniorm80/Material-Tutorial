@@ -12,4 +12,7 @@ export class LayoutComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  logChanges(index: any) {
+    console.log(index);
+  }
 }

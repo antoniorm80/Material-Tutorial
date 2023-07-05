@@ -1,0 +1,57 @@
+/* Toolnav Bar*/
+.navbar {
+    justify-content: space-between;
+}
+
+span {
+    padding-right: 1rem;
+    cursor: pointer;
+}
+
+span:hover {
+    color:goldenrod;
+}
+
+/* Sidenav Bar*/
+mat-sidenav-container {
+    height: 100%;
+}
+
+mat-sidenav {
+    padding-top: 20px;
+    margin-left: 10px;
+    background-color: #fafafa;
+    width:220px;
+}
+
+.mat-toolbar.mat-primary {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+
+  .mat-toolbar.mat-default {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  
+a {
+    list-style:none;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: medium;
+}
+
+a:hover {
+    color:gold;
+}
+
+mat-toolbar {
+    background: inherit;
+    justify-content: center;
+} 
+
+mat-list-item  {
+    color: white;
+}
