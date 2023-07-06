@@ -1,0 +1,12 @@
+.example-tree-node {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    color: #3F51B5;
+  }
+  .example-tree-node-child {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #E91E63;
+  }

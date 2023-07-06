@@ -1,10 +1,9 @@
-<div style="text-align: center; display:flexbox;">
+<div style="text-align: center; display:flexbox; margin-top: 30px;">
 
 
 <!-- *********** Typography *********** -->
-<!-- <h1>Typography</h1>
-<br/>
-<div class="mat-display-4"> This is display 4</div>
+<h1>Typography</h1>
+<!-- <div class="mat-display-4"> This is display 4</div>
 <div class="mat-display-3"> This is display 3</div>
 <div class="mat-display-2"> This is display 2</div>
 <div class="mat-display-1"> This is display 1</div>
@@ -17,33 +16,30 @@
 <div class="mat-body-1">This is display Body 1</div>
 <div class="mat-body-2"> This is display Bold Body 2</div>
 <div class="mat-caption"> This is display Caption</div>
-<br/>
+<br/>-->
 <div class="mat-typography">
   <h1> This is a typography for h1</h1>
   <h2> This is a typography for h2</h2>
   <h3> This is a typography for h3</h3>
   <h4> This is a typography for h4</h4>
-</div> -->
+</div> 
 
 <!-- *********** Botones *********** -->
 <h1>Botones</h1>
 <section>
-  <br>
   <button mat-button>Click Me!</button>
   <button mat-raised-button > Click Me!</button>
   <button mat-flat-button > Click Me!</button>
   <button mat-stroked-button > Click Me!</button>
   <button mat-button disabled>Disabled</button>
     <a mat-button href="https://www.google.com/" target="_blank">Link</a>
-  <br>
   <button mat-icon-button>Icon</button>
   <button mat-icon-button color="warn">
     <mat-icon>favorite</mat-icon>
   </button>
   <button mat-fab>FAB</button>
   <button mat-mini-fab>fab</button>
-  <br>
-  <button color="primary" mat-button>Primary</button>
+ <!--  <button color="primary" mat-button>Primary</button>
   <button color="accent" mat-button>Accent</button>
   <button color="warn" mat-button>Warn</button>
   <br>
@@ -51,17 +47,16 @@
   <button color="accent" mat-raised-button>Accent</button>
   <button color="warn" mat-raised-button>Warn</button>
   <br>
-  <button color="primary" disableRipple mat-button>No Ripple Effect</button>
-</section>
-<hr>
+  <button color="primary" disableRipple mat-button>No Ripple Effect</button>-->
+</section> 
+
   <!-- *********** Button Toggle *********** -->
-<h1>Boton Toggle</h1>
+<h1>Botones Toggle</h1>
 <section>
-  <br>
   <mat-button-toggle #toggleBtn checked>Toggle</mat-button-toggle>
   {{toggleBtn.checked}}
   <br>
-  <p> Elige uno solo</p>
+  <!-- <p> Elige uno solo</p>
   <mat-button-toggle-group #toggleGroup="matButtonToggleGroup">
     <mat-button-toggle value="angular">Angular</mat-button-toggle>
     <mat-button-toggle value="react">React</mat-button-toggle>
@@ -75,19 +70,18 @@
     <mat-button-toggle value="react">React</mat-button-toggle>
     <mat-button-toggle value="vue">Vue</mat-button-toggle>
   </mat-button-toggle-group>
-  {{toggleGroupMultiple.value}}
+  {{toggleGroupMultiple.value}} -->
 </section>
-<hr>
+<br>
   <!-- *********** Icons *********** -->
   <h1>Icons</h1>
   <section>
-    <br>
     <mat-icon>grade</mat-icon>
     <mat-icon color="primary">grade</mat-icon>
     <mat-icon color="accent">grade</mat-icon>
     <mat-icon color="warn">grade</mat-icon>
   </section>
-  <hr>
+  <br>
   <!-- *********** Badges *********** -->
   <h1>Badges</h1>
   <section>
@@ -96,7 +90,7 @@
     <span matBadge="5" class="matBadgeClass" matBadgePosition="below before">Notification</span>
     <span matBadge="5" class="matBadgeClass" matBadgePosition="below after">Notification</span>
     <span matBadge="5" class="matBadgeClass" matBadgePosition="above before">Notification</span>
-    <br>
+    <!-- <br>
     <span matBadge="5" matBadgeSize="small" class="matBadgeClass" >Notification</span>
     <span matBadge="5" matBadgeSize="medium" class="matBadgeClass" >Notification</span>
     <span matBadge="5" matBadgeSize="large" class="matBadgeClass" >Notification</span>
@@ -105,16 +99,16 @@
     <span matBadge="5" matBadgeColor="accent" class="matBadgeClass" >Notification</span>
     <span matBadge="5" matBadgeColor="warn"class="matBadgeClass" >Notification</span>
     <br>
-    <span matBadge="5" matBadgeColor="primary" class="matBadgeClass" matBadgeOverlap="false" >Notification</span>    
+    <span matBadge="5" matBadgeColor="primary" class="matBadgeClass" matBadgeOverlap="false" >Notification</span>     -->
   </section>
-  <hr>
+  <br>
   <!-- *********** Porgress Spinner *********** -->
   <h1>Progress Spinner</h1>
   <section>
-      <mat-progress-spinner value="25"></mat-progress-spinner>
+      <!-- <mat-progress-spinner value="25"></mat-progress-spinner>
       <mat-progress-spinner value="50"></mat-progress-spinner>
       <mat-progress-spinner value="75"></mat-progress-spinner>
-      <mat-progress-spinner value="100"></mat-progress-spinner>
+      <mat-progress-spinner value="100"></mat-progress-spinner> -->
       <mat-spinner *ngIf="showSpinner"></mat-spinner>
       <mat-spinner *ngIf="showSpinner" color="accent"></mat-spinner>
       <mat-spinner *ngIf="showSpinner" color="warn"></mat-spinner>

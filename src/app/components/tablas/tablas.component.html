@@ -1,10 +1,14 @@
-<div style="margin-top: 10px; padding: 40px;">
 
-    <mat-form-field class="full-width" appearance="fill" color="warn">
-        <mat-label>Filter</mat-label>
-        <input matInput (keyup)="applyFilter($event)" placeholder="filtrar" #input>
-    </mat-form-field>
-
+    <div style="text-align: center; margin-top: 30px;">
+       <h1>Data Table</h1>  
+    </div>
+    <div style="text-align: end; padding-right: 30px;">
+        <mat-form-field class="full-width" appearance="fill" color="primary">
+            <mat-label>Búsqueda</mat-label>
+            <input matInput (keyup)="applyFilter($event)" placeholder="Search" #input>
+        </mat-form-field> 
+     </div>
+<div style="padding-left: 30px; padding-right: 30px;">
     <div class="mat-elevation-z8Quitame">
         <table mat-table [dataSource]="dataSource" matSort >
         <!-- Position Column -->

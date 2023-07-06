@@ -11,6 +11,9 @@ import { DireccionComponent } from './schematics/direccion/direccion.component';
 import { NavegarComponent } from './schematics/navegar/navegar.component';
 import { TableroComponent } from './schematics/tablero/tablero.component';
 import { DragarComponent } from './schematics/dragar/dragar.component';
+import { RamasComponent } from './schematics/ramas/ramas.component';
+import { ArbolComponent } from './schematics/arbol/arbol.component';
+import { JerarquiaComponent } from './schematics/jerarquia/jerarquia.component';
 
 const routes: Routes = [
   // { path: '', redirectTo: '/login', pathMatch:'full', title:'Login-App'},
@@ -24,8 +27,10 @@ const routes: Routes = [
   { path:'navegar', component: NavegarComponent, title:'Tabla-App'},
   { path:'tabla', component: TablaComponent, title:'Tabla-App'},
   { path:'tablero', component: TableroComponent, title:'Tabla-App'},
-  // { path:'ramas', component: RamasComponent, title:'Tabla-App'},
+  { path:'ramas', component: RamasComponent, title:'Tabla-App'},
   { path:'dragar', component: DragarComponent, title:'Tabla-App'},
+  { path:'arbol', component: ArbolComponent, title:'Arbol-App'},
+  { path:'jerarquia', component: JerarquiaComponent, title:'Jerarquía-App'}
 ];
 
 @NgModule({

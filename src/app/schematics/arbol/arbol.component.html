@@ -1,0 +1,39 @@
+<div style="text-align: center; display:flexbox; margin-top: 30px;">
+    <h1>Tree </h1>
+    <span class="mat-display-1">Standalone Components</span>
+    <br/>
+    <cdk-tree [dataSource]="dataSource" [treeControl]="treeControl">
+        <!-- HIJOS -->
+        <cdk-tree-node *cdkTreeNodeDef="let node" cdkTreeNodePadding
+            [style.display]="shouldRender(node) ? 'flex' : 'none'"
+            [style.font-size]="!node.expandable ? '2rem' : '1.5rem'"
+            class="example-tree-node-child">
+                <!-- BUTTON Para Padding HIJOS -->
+                <button mat-icon-button disabled></button>
+                {{node.name}}
+        </cdk-tree-node>
+        <!-- PADRES - Expandibles (hijos) -->
+        <cdk-tree-node *cdkTreeNodeDef="let node; when: hasChild" cdkTreeNodePadding
+            [style.display]="shouldRender(node) ? 'flex' : 'none'"
+            class="example-tree-node">
+                <button mat-icon-button cdkTreeNodeToggle
+                    [attr.aria-label]="'Toggle ' + node.name"
+                    (click)="node.isExpanded = !node.isExpanded"              
+                    [style.visibility]="node.expandable ? 'visible' : 'hidden'">
+                <mat-icon class="mat-icon-rtl-mirror">
+                    {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+                </mat-icon>
+                </button>
+                {{node.name}}
+        </cdk-tree-node>
+    </cdk-tree>
+</div>
+<!-- 
+<cdk-tree [dataSource]="dataSource" [treeControl]="treeControl">
+    
+    <cdk-tree-node *cdkTreeNodeDef="let node" cdkTreeNodePadding
+    [style.display]="shouldRender(node) ? 'flex' : 'none'"
+    class="example-tree-node"> parent node </cdk-tree-node>
+    <button mat-icon-button disabled></button>
+  </cdk-tree> -->
+

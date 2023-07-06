@@ -39,6 +39,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { PopupComponent } from './components/modales/popup.component';
 import { SnackedBarComponent } from './components/modales/snackedbar.component';
+import { RamasComponent } from './schematics/ramas/ramas.component';
 
 
 
@@ -56,7 +57,8 @@ import { SnackedBarComponent } from './components/modales/snackedbar.component';
     TableroComponent,
     DragarComponent,
     PopupComponent,
-    SnackedBarComponent
+    SnackedBarComponent,
+    RamasComponent
   ],
    imports: [
     BrowserModule,

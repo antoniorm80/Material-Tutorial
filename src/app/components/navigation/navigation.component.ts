@@ -6,8 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navigation.component.css']
 })
 export class NavigationComponent implements OnInit {
- 
-  constructor() { }
+  numbers: number[] = [];
+
+  constructor() {
+    for (let i = 0; i < 1000; i++) {      
+     this.numbers.push(i + 1);      
+    }
+   }
 
   ngOnInit(): void {
   }
