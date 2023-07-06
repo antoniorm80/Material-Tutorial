@@ -40,6 +40,7 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
 import { PopupComponent } from './components/modales/popup.component';
 import { SnackedBarComponent } from './components/modales/snackedbar.component';
 import { RamasComponent } from './schematics/ramas/ramas.component';
+import { JerarquiaService } from './service/jerarquia.service';
 
 
 
@@ -86,7 +87,9 @@ import { RamasComponent } from './schematics/ramas/ramas.component';
     DragDropModule,
     ScrollingModule
   ],
-  providers: [ ],
+  providers: [ 
+    JerarquiaService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

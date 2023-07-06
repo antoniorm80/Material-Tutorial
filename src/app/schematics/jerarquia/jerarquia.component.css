@@ -18,8 +18,7 @@
     transition: 0.5s;
 }
 
-
-/*----------------genealogy-tree----------*/
+/*----------------Genealogy-Tree----------*/
 .genealogy-body{
     white-space: nowrap;
     overflow-y: hidden;
@@ -28,9 +27,11 @@
     padding-top: 10px;
     text-align: center;
 }
+
 .genealogy-tree{
-  display: inline-block;
+    display: inline-block;
 }
+
 .genealogy-tree ul {
     padding-top: 20px; 
     position: relative;
@@ -47,11 +48,11 @@
 .genealogy-tree li::before, .genealogy-tree li::after{
     content: '';
     position: absolute; 
-  top: 0; 
-  right: 50%;
+    top: 0; 
+    right: 50%;
     border-top: 2px solid #ccc;
     width: 50%; 
-  height: 18px;
+    height: 18px;
 }
 .genealogy-tree li::after{
     right: auto; left: 50%;
@@ -109,13 +110,17 @@
     position: relative;
 }
 .member-image{
-    width: 120px;
+    width: 200px;
     position: relative;
 }
 .member-image img{
     width: 60px;
     height: 60px;
     border-radius: 6px;
-  background-color :#000;
-  z-index: 1;
+    background-color :#000;
+    z-index: 1;
+}
+.member-details h3 { 
+    font-size: 1.3rem;
+    color: #01579B;
 }

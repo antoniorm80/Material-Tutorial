@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { JerarquiaService } from './../../service/jerarquia.service';
 
 @Component({
   selector: 'app-jerarquia',
@@ -9,43 +10,53 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./jerarquia.component.css']
 })
 export class JerarquiaComponent implements OnInit {
-  mostrar: boolean = true;
-
-
-  constructor() { }
+  
+  constructor(private serviceJerarquia: JerarquiaService) {
+    this.serviceJerarquia.loadScript();
+   }
 
   ngOnInit(): void {
+   this.mostarSoloCEO();
   }
 
-  mostrme() {
-    this.mostrar = ! this.mostrar;
-    console.log(this.mostrar);
+  mostarSoloCEO() {
+    const treeElements = document.querySelectorAll<HTMLElement>(".genealogy-tree ul");
+      Array.from(treeElements).forEach(treeElement => {
+          treeElement.style.display = "none";
+      });
+      const firstTreeElement = document.querySelector<HTMLElement>('.genealogy-tree>ul');
+      if (firstTreeElement) {
+          firstTreeElement.style.display = "";
+      }
   }
 
-  // $(function () {
-  //     $('.genealogy-tree ul').hide();
-  //     $('.genealogy-tree>ul').show();
-  //     $('.genealogy-tree ul.active').show();
-  //     $('.genealogy-tree li').on('click', function (e) {
-  //         var children = $(this).find('> ul');
-  //         if (children.is(":visible")) 
-  //           children.hide('fast').removeClass('active');
-  //         else 
-  //           children.show('fast').addClass('active');
-  //         e.stopPropagation();
-  //     });
-  // });
+  mostrarJerarquia() {
+      const treeElements = document.querySelectorAll<HTMLElement>(".genealogy-tree ul");
+      Array.from(treeElements).forEach(treeElement => {
+          treeElement.style.display = "none";
+      });
+      const firstTreeElement = document.querySelector<HTMLElement>('.genealogy-tree>ul');
+      if (firstTreeElement) {
+          firstTreeElement.style.display = "";
+      }
+      const activeTreeElement = document.querySelector<HTMLElement>('.genealogy-tree ul.active');
+      if (activeTreeElement) {
+          activeTreeElement.style.display = "";
+      }
+      const treeItems = document.querySelectorAll<HTMLElement>(".genealogy-tree li");
+      Array.from(treeItems).forEach(treeItem => {
+          treeItem.addEventListener('click', (e) => {
+              let children = treeItem.querySelector<HTMLElement>(' ul');
+              if (children && children.style.display === "block") {
+                  children.style.display = "none";
+                  children.classList.remove("active");
+              } else if (children) {
+                  children.style.display = "block";
+                  children.classList.add("active");
+              }
+              e.stopPropagation();
+          });
+      });
 
-
-  // document.addEventListener("DOMContentLoaded", () => {
-  //     document.querySelectorAll(".genealogy-tree ul").style.display = "none";
-  //     $('.genealogy-tree>ul').style.display = "";
-  //     $('.genealogy-tree ul.active').style.display = "";
-  //     document.querySelectorAll(".genealogy-tree li").addEventListener('click', (e) => {
-  //         let children = this.find('> ul');
-  //         if (children.is(":visible")) children.hide('fast').classList.remove("active");
-  //         else children.show('fast').classList.add("active");
-  //         e.stopPropagation();
-  //     });
-
+  }
 }
